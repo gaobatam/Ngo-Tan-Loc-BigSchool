@@ -2,7 +2,18 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
+.navbar-inverse {
+    background-color: #713b9f;
+    border-color: #fbf6f6;
+}
 
+.navbar-inverse .navbar-nav > li >a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand{
+    color: white;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -21,4 +32,28 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.course{
+    list-style:none;
+}
+
+.course >li{
+    position:relative;
+    margin-bottom: 30px;
+}
+
+.course >li .datetime{
+    text-align:center;
+    background-color: #4cff00;
+    color:white;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.course > li .detail{
+    position: absolute;
+    top :0;
+    left: 70px;
 }
