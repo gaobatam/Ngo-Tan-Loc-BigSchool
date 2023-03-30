@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using NgoTanLoc.ViewModels;
 
 namespace NgoTanLoc.Controllers
 {
@@ -22,8 +23,14 @@ namespace NgoTanLoc.Controllers
             var upCommingCourses = _dbContext.Courses
                 .Include(c => c.Lecture)
                 .Include(c => c.Category);
-                //.Where(c => c.DateTime > DateTime.Now);
-            return View(upCommingCourses);
+            //.Where(c => c.DateTime > DateTime.Now);
+
+            var viewModle = new ViewsCourseChecking
+            {
+                UpcommingCourses = upCommingCourses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModle);
         }
 
         public ActionResult About()

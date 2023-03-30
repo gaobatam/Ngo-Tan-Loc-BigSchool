@@ -10,6 +10,7 @@ namespace NgoTanLoc.Models
     {
         public int Id { get; set; }
 
+        public bool isCancelled { get; set; }
         public ApplicationUser Lecture { get; set; }
         [Required]
         public string LecturerId { get; set; }
